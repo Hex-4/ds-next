@@ -32,12 +32,12 @@ export default function Home() {
       </Head>
      
       <main>
-        <div className='flex'>
+        <div className='flex flex-row'>
           <SideBar/>
-          <div className='flex-grow bg-primary h-screen' >
+          <div className='flex-grow bg-primary h-screen fixed left-16' >
           <Header content={<><h1 className='header m-4 font-bold'>Welcome to the <span className='text-secondary'>Dimaverse.</span></h1>
           <h5 className='text-5xl text-white m-4 font-bold'>The <span className='text-secondary'>magical</span> dimemsion where our work comes to life.</h5></>} fillscreen={false}/>
-          
+          <div className="bg-slate-800 rounded-md m-4 text-white p-9 w-11/12 justify-center">lorem</div>
           </div>
         </div>
       </main>

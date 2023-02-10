@@ -1,4 +1,4 @@
-function Header({ text, fillscreen, content }) {
+function Header({ text = null, fillscreen = false, content = null}) {
     if (fillscreen == true)
       if (text)
         return (
