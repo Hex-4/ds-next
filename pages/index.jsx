@@ -42,19 +42,19 @@ export default function Home() {
         <div className='flex flex-row w-full h-full'>
           <SideBar/>
           <div className='flex-grow bg-primary h-screen fixed left-16 min-w-full right-16' >
-          <div className='card'>
+          <div className='card group'>
             <div className='card-content'>
-              <h1 className='card-title' >Welcome to the Dimaverse.</h1>
+              <h1 className='card-title' >Welcome to the <span className="magic">Dimaverse.</span></h1>
               <h4 className='card-subtitle'>
                 <span className="card-subtitle-word">The </span>
-                <span className="delay-[40ms] card-subtitle-word ">magical </span>
-                <span className="delay-[80ms] card-subtitle-word ">dimension </span>
-                <span className="delay-[120ms] card-subtitle-word">where </span>
-                <span className="delay-[160ms] card-subtitle-word">our </span>
-                <span className="card-subtitle-word delay-[200ms]">work </span>
-                <span className="card-subtitle-word delay-[240ms]">comes </span>
-                <span className="card-subtitle-word delay-[280ms]">to </span>
-                <span className="card-subtitle-word delay-[320ms]">life.</span>
+                <span className="delay-[50ms] card-subtitle-word  magic">magical </span>
+                <span className="delay-[100ms] card-subtitle-word ">dimension </span>
+                <span className="delay-[150ms] card-subtitle-word">where </span>
+                <span className="delay-[200ms] card-subtitle-word">our </span>
+                <span className="card-subtitle-word delay-[250ms]">work </span>
+                <span className="card-subtitle-word delay-[300ms]">comes </span>
+                <span className="card-subtitle-word delay-[350ms]">to </span>
+                <span className="card-subtitle-word delay-[400ms]">life.</span>
               </h4>
             </div>
           </div>

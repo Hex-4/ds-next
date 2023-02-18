@@ -24,6 +24,10 @@
   --g2: rgb(0, 238, 255);
   --g1: rgb(103, 255, 103);
   --g3: rgb(50, 163, 255);
+
+  --grad1: rgb(255, 153, 0);
+  --grad2: rgb(255, 251, 0);
+  
 }
 
 
@@ -113,5 +117,30 @@
   position: relative;  
   transform: translateY(40%);
   transition: none;
+}
+
+.magic {
+  animation: background-pan 2s linear infinite;
+  background: linear-gradient(
+    130deg,
+    var(--grad1),
+    var(--grad2),
+    var(--grad1)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
 }
 
