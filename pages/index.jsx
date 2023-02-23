@@ -41,7 +41,7 @@ export default function Home() {
       <main>
         <div className='flex flex-row w-full h-full'>
           <SideBar/>
-          <div className='flex-grow bg-primary h-screen fixed left-16 min-w-full right-16' >
+          <div className='flex-grow bg-primary h-screen fixed left-16 min-w-full right-16 -z-50' >
           <div className='card group'>
             <div className='card-content'>
               <h1 className='card-title' >Welcome to the <span className="magic">Dimaverse.</span></h1>
