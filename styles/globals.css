@@ -21,9 +21,9 @@
 :root {
   --border: rgb(244, 208, 3);
   
-  --g2: rgb(0, 238, 255);
-  --g1: rgb(103, 255, 103);
-  --g3: rgb(50, 163, 255);
+  --g2: rgb(0, 187, 201);
+  --g1: rgb(74, 190, 74);
+  --g3: rgb(30, 109, 173);
 
   --grad1: rgb(255, 153, 0);
   --grad2: rgb(255, 251, 0);
@@ -32,7 +32,7 @@
 
 
 .card {
-  height: 500px;
+  height: 450px;
   cursor: pointer;
   width: full;
   
@@ -68,7 +68,7 @@
   background-position: 0% 0%;
   background-size: 300% 300%;
   content: "";
-  height: 500px;
+  height: 400px;
   left: 0px;
   pointer-events: none;
   position: absolute;
@@ -76,6 +76,7 @@
   transition: background-position 350ms ease, transform 350ms ease;
   width: 100%;
   z-index: 1;
+  transform: scale(1.1)
 }
 
 .card-content {
@@ -95,7 +96,7 @@
 
 .card-title,
 .card-subtitle {
-  color: white;
+  color: rgb(216, 216, 216);
   font-family: "Inter", sans-serif;
   font-weight: 400;
   margin: 0px;
