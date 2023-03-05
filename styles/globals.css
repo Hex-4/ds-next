@@ -68,7 +68,7 @@
   background-position: 0% 0%;
   background-size: 300% 300%;
   content: "";
-  height: 400px;
+  height: 450px;
   left: 0px;
   pointer-events: none;
   position: absolute;
@@ -76,7 +76,7 @@
   transition: background-position 350ms ease, transform 350ms ease;
   width: 100%;
   z-index: 1;
-  transform: scale(1.1)
+  
 }
 
 .card-content {
@@ -86,15 +86,15 @@
   );
   background-position: 0% 0%;
   background-size: 5vmin 5vmin;
-  height: calc(100% - 10vmin);
+  height: 100%;
   padding: 5vmin;
   position: relative;
   transition: background-position 350ms ease;
-  width: calc(100% - 10vmin);
+  width: 100%;
   z-index: 2;
 }
 
-.card-title,
+.fancy-card-title,
 .card-subtitle {
   color: rgb(216, 216, 216);
   font-family: "Inter", sans-serif;
@@ -102,7 +102,7 @@
   margin: 0px;
 }
 
-.card-title {
+.fancy-card-title {
   font-size: 7vmin;
 }
 

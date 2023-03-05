@@ -37,10 +37,10 @@ export default function Home() {
             <main>
                 <div className='flex flex-row w-full h-full'>
                     <SideBar/>
-                    <div className='flex-grow bg-primary h-screen fixed left-16 min-w-full right-16 -z-50'>
+                    <div className='flex-grow bg-primary h-screen fixed left-16 right-0 -z-50'>
                         <div className='card group'>
                             <div className='card-content'>
-                                <h1 className='card-title'>Welcome to the <span className="magic">Dimaverse.</span></h1>
+                                <h1 className='fancy-card-title'>Welcome to the <span className="magic">Dimaverse.</span></h1>
                                 <h4 className='card-subtitle'>
                                     <span className="card-subtitle-word">The </span>
                                     <span className="delay-[50ms] card-subtitle-word  magic">magical </span>
@@ -55,6 +55,8 @@ export default function Home() {
                             </div>
                         </div>
 
+                        <div className=" m-6 flex justify-center items-center"><button className='btn btn-primary m-4 loading text-center rounded-full'>now in development</button></div>
+                        
                     </div>
                 </div>
 
