@@ -31,33 +31,33 @@
 }
 
 
-.card {
+.fancy-card {
   height: 450px;
   cursor: pointer;
   width: full;
   
 }
 
-.card:hover:before {
+.fancy-card:hover:before {
   background-position: 100% 100%;
   
 }
 
-.card:hover > .card-content {
+.fancy-card:hover > .fancy-card-content {
   background-position: -10% 0%;
 }
 
-.card:hover > .card-icon {
+.fancy-card:hover > .fancy-card-icon {
   color: white; 
 }
 
-.card:hover > .card-content > .card-subtitle > .card-subtitle-word {  
+.fancy-card:hover > .fancy-card-content > .fancy-card-subtitle > .fancy-card-subtitle-word {  
   opacity: 1;
   transform: translateY(0%);
   transition: opacity 0ms, transform 200ms cubic-bezier(.90, .06, .15, .90);
 }
 
-.card:before {
+.fancy-card:before {
   background: linear-gradient(
     130deg, 
     transparent 0% 33%, 
@@ -79,7 +79,7 @@
   
 }
 
-.card-content {
+.fancy-card-content {
   background-image: radial-gradient(
     rgba(255, 255, 255, 0.2) 8%, 
     transparent 8%
@@ -94,24 +94,24 @@
   z-index: 2;
 }
 
-.fancy-card-title,
-.card-subtitle {
+.fancy-fancy-card-title,
+.fancy-card-subtitle {
   color: rgb(216, 216, 216);
   font-family: "Inter", sans-serif;
   font-weight: 400;
   margin: 0px;
 }
 
-.fancy-card-title {
+.fancy-fancy-card-title {
   font-size: 7vmin;
 }
 
-.card-subtitle {
+.fancy-card-subtitle {
   font-size: 4vmin;
   margin-top: 2vmin;
 }
 
-.card-subtitle-word {
+.fancy-card-subtitle-word {
   display: inline-block;
   margin: 0vmin 0.4vmin;
   opacity: 0;
@@ -145,3 +145,24 @@
   }
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ffd500 #1e293b;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #1e293b;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffd500;
+    border-radius: 50px;
+    border: 0px solid #ffffff;
+  }
