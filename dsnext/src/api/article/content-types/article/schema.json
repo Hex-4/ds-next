@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "project": {
+      "type": "enumeration",
+      "enum": [
+        "BWN",
+        "Hysterical Heads",
+        "RotM",
+        "Galaxium",
+        "X+Y = Adventures",
+        "EduStickers",
+        "Dynamicland",
+        "Tydes",
+        "Portalcoin",
+        "RETRI",
+        "ARG",
+        "Meta"
+      ]
+    },
+    "post": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "datetime"
+    }
+  }
+}

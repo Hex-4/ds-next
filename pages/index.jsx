@@ -72,10 +72,10 @@ export default function Home() {
                                 </div>
                             </div>
                             <div class="card m-6 card-side bg-base-100 shadow-xl">
-                            <figure><img src="" alt="Movie" className='w-96'/></figure>
+                            <figure><img src="https://images.unsplash.com/photo-1501618669935-18b6ecb13d6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1149&q=80" alt="Movie" className='w-96'/></figure>
                                 <div class="card-body">
                                     <h2 class="card-title text-4xl">This... is a blog post.</h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                                    <p>The newest feature!</p>
                                     <div class="card-actions justify-end">
                                         <button class="btn btn-primary">more</button>
                                     </div>
