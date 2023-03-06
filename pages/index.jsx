@@ -4,9 +4,37 @@ import SideBar from "components/SideBar"
 
 import React, {useState, useEffect} from 'react';
 import Swal from 'sweetalert2'
+import {GraphQLClient} from "graphql-request"
+export async function getStaticProps() {
+    const hygraph = new GraphQLClient(
+      'https://api-ca-central-1.hygraph.com/v2/cldtk9kco5n4u01un1r1gacjy/master'
+    );
+    const { posts } = await hygraph.request(
+        `
+        query Posts {
+            posts(orderBy: publishedAt_DESC, first: 2) {
+              createdAt
+              content {
+                markdown
+              }
+              title
+              publishedAt
+              updatedAt
+            }
+          }
+          
+        `
+      );
+    
+      return {
+        props: {
+          posts,
+        },
+      };
+    }
 
 
-export default function Home() {
+export default function Home({posts}) {
 
 
     const [init, setInit] = useState(false);
@@ -18,12 +46,16 @@ export default function Home() {
                 icon: 'info',
                 confirmButtonText: 'Cool!'
             })
+            console.log(posts)
 
 
         }
         setInit(true)
 
     }, [])
+
+   
+
     return (
         <>
             <Head>
@@ -60,27 +92,18 @@ export default function Home() {
                         <div className="bg-slate-800 shadow-md p-4 h-16"><h1 className='text-3xl text-white'>The Latest</h1></div>
 
                         <div>
-                            <div class="card m-6 card-side bg-base-100 shadow-xl">
-                            <figure><img src="https://images.unsplash.com/photo-1532483578477-e81e1513c3a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Movie" className='w-96'/></figure>
-                                <div class="card-body">
-                                    <h2 class="card-title text-4xl">New project: the Scribbleverse!</h2>
-                                    <p>Yet another new project...</p>
-                                    <p>The Scribbleverse is a collection of 1000 uniquely named NFTs affectionately named the Scribblings.</p>
-                                    <div class="card-actions justify-end">
-                                        <button class="btn btn-primary">more</button>
+                        {posts.map(({title, markdown}) => (
+                            <div className="card m-6 card-side bg-base-100 shadow-xl">
+                                <figure><img src="https://images.unsplash.com/photo-1532483578477-e81e1513c3a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Movie" className='w-96'/></figure>
+                                <div className="card-body">
+                                    <h2 className="card-title text-4xl">{title}</h2>
+                                    <p>{markdown}</p>
+                                    <div className="card-actions justify-end">
+                                        <button className="btn btn-primary">more</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card m-6 card-side bg-base-100 shadow-xl">
-                            <figure><img src="" alt="Movie" className='w-96'/></figure>
-                                <div class="card-body">
-                                    <h2 class="card-title text-4xl">This... is a blog post.</h2>
-                                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                                    <div class="card-actions justify-end">
-                                        <button class="btn btn-primary">more</button>
-                                    </div>
-                                </div>
-                            </div>
+                        ))}
                             
                         </div>
                         
