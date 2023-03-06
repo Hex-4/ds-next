@@ -94,7 +94,7 @@ export default function Home({posts}) {
 
                         <div>
                         {posts.map((post) => (
-                            <div className="card m-6 card-side bg-base-100 shadow-xl">
+                            <div className="card m-6 card-side bg-base-100 shadow-xl" key={post.title}>
                                 <figure><img src="https://images.unsplash.com/photo-1532483578477-e81e1513c3a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Movie" className='w-96'/></figure>
                                 <div className="card-body">
                                     <h2 className="card-title text-4xl">{post.title}</h2>
