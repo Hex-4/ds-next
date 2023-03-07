@@ -16,7 +16,7 @@ export async function getStaticProps() {
             posts(orderBy: publishedAt_DESC, first: 2) {
               createdAt
               content {
-                html
+                markdown
               }
               title
               publishedAt
@@ -97,13 +97,13 @@ export default function Home({posts}) {
 
                         <div>
                         {posts.map((post) => (
-                            <div className="card m-6 card-side bg-base-100 shadow-xl" key={post.title}>
-                                <figure><img src={post.cover.url} alt="cover image" className='w-96'/></figure>
-                                <div className="card-body">
+                            <div className="card m-6 card-side bg-base-100 shadow-xl flex flex-row" key={post.title}>
+                                <figure className='flex-grow'><img src={post.cover.url} alt="cover image" className='flex-grow'/></figure>
+                                <div className="card-body flex-shrink ">
                                     <h2 className="card-title text-4xl">{post.title}</h2>
-                                    <>{post.content.markdown}</>
+                                    <p>{post.content.markdown}</p>
                                     <div className="card-actions justify-end">
-                                        <button className="btn btn-primary">more</button>
+                                        <button className="btn btn-primary align-bottom">more</button>
                                     </div>
                                 </div>
                             </div>
