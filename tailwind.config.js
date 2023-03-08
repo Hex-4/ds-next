@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
  
   content: [
@@ -20,7 +22,9 @@ module.exports = {
         error: "#F87272",
       },
       fontFamily: {
-        sans: ["Inter"]
+        'sans': ['Inter','inter', ...defaultTheme.fontFamily.sans],
+        'serif': [...defaultTheme.fontFamily.serif],
+        'mono': [...defaultTheme.fontFamily.mono]
       }
     },
   },

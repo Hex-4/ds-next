@@ -71,7 +71,7 @@ export default function Home({posts}) {
             </Head>
 
             <main>
-                <div className='flex flex-row w-full h-full'>
+                <div className='flex flex-row w-full h-full font-sans'>
                     <SideBar/>
                     <div className='flex-grow bg-primary h-full fixed left-16 right-0 -z-50 overflow-y-scroll'>
                         <div className='fancy-card group'>
@@ -97,9 +97,9 @@ export default function Home({posts}) {
 
                         <div>
                         {posts.map((post) => (
-                            <div className="card m-6 card-side bg-base-100 shadow-xl flex flex-row" key={post.title}>
-                                <figure className='flex-grow'><img src={post.cover.url} alt="cover image" className='flex-grow min-w-full'/></figure>
-                                <div className="card-body flex-shrink w-3/4">
+                            <div className="card m-6 card-side bg-base-100 shadow-xl flex flex-row h-96" key={post.title}>
+                                <figure className='flex-grow'><img src={post.cover.url} alt="cover image" className='flex-grow w-96 aspect-square'/></figure>
+                                <div className="card-body flex-shrink w-5/6">
                                     <h2 className="card-title text-4xl">{post.title}</h2>
                                     <p>{post.content.markdown}</p>
                                     <div className="card-actions justify-end">
