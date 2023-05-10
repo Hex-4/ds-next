@@ -123,7 +123,7 @@ export default function Home({posts}) {
                         
                         <div className="bg-box shadow-lg m-4 h-16 rounded-lg flex items-center justify-end group hover:bg-slate-700 transition-all">
                              <div className="flex-grow m-4">
-                                <h1 className="text-3xl text-content">Check out what's stirring in Projects</h1>
+                                <h1 className="text-3xl text-content">Check out what&apos;s stirring in Projects</h1>
                              </div>
                             <div className="bg-slate-700 group-hover:bg-tertiary shadow-lg h-full aspect-square float-right rounded-r-lg text-secondary flex items-center justify-center transition-all">
                                 <HiSquares2X2 size="45" />
@@ -131,7 +131,7 @@ export default function Home({posts}) {
                         </div>
                         <div className="bg-box shadow-lg m-4 h-16 rounded-lg flex items-center justify-end group hover:bg-slate-700 transition-all">
                              <div className="flex-grow m-4">
-                                <h1 className="text-3xl text-content">Meet the Denizens in The 'Verse</h1>
+                                <h1 className="text-3xl text-content">Meet the Denizens in The &apos;Verse</h1>
                              </div>
                             <div className="bg-slate-700 group-hover:bg-tertiary shadow-lg h-full aspect-square float-right rounded-r-lg text-secondary flex items-center justify-center transition-all">
                                 <IoPlanet size="45" />
@@ -147,7 +147,7 @@ export default function Home({posts}) {
                         </div>
                         <div className="bg-box shadow-lg m-4 h-16 rounded-lg flex items-center justify-end group hover:bg-slate-700 transition-all">
                              <div className="flex-grow m-4">
-                                <h1 className="text-3xl text-content">It's always party o'clock in Special Events</h1>
+                                <h1 className="text-3xl text-content">It&apos;s always party o&apos;clock in Special Events</h1>
                              </div>
                             <div className="bg-slate-700 group-hover:bg-tertiary shadow-lg h-full aspect-square float-right rounded-r-lg text-secondary flex items-center justify-center transition-all">
                                 <HiSparkles size="45" />
