@@ -6,6 +6,14 @@ import React, {useState, useEffect} from 'react';
 import Swal from 'sweetalert2'
 import {GraphQLClient} from "graphql-request"
 import parse from "marked"
+import {
+    BsFillLightningFill,
+    BsDiamondFill,
+    BsPeopleFill,
+  } from "react-icons/bs";
+import { HiSquares2X2, HiSparkles } from "react-icons/hi2";
+import {IoPlanet} from "react-icons/io5"
+import {BiNews} from "react-icons/bi"
 export async function getStaticProps() {
     const hygraph = new GraphQLClient(
       'https://api-ca-central-1.hygraph.com/v2/cldtk9kco5n4u01un1r1gacjy/master'
@@ -74,7 +82,7 @@ export default function Home({posts}) {
                 <div className='flex flex-row w-full h-full font-sans'>
                     <SideBar/>
                     <div className='flex-grow bg-primary h-full fixed left-16 right-0 -z-50 overflow-y-scroll'>
-                        <div className='fancy-card group'>
+                        <div className='fancy-card-home fancy-card group'>
                             <div className='fancy-card-content'>
                                 <h1 className='fancy-fancy-card-title'>Welcome to the <span className="magic">Dimaverse.</span></h1>
                                 <h4 className='fancy-card-subtitle'>
@@ -110,7 +118,46 @@ export default function Home({posts}) {
                         ))}
                             
                         </div>
+
+                        <div className="bg-slate-800 shadow-md p-4 h-16"><h1 className='text-3xl text-white'>Explore</h1></div>
                         
+                        <div className="bg-box shadow-lg m-4 h-16 rounded-lg flex items-center justify-end group hover:bg-slate-700 transition-all">
+                             <div className="flex-grow m-4">
+                                <h1 className="text-3xl text-content">Check out what's stirring in Projects</h1>
+                             </div>
+                            <div className="bg-slate-700 group-hover:bg-tertiary shadow-lg h-full aspect-square float-right rounded-r-lg text-secondary flex items-center justify-center transition-all">
+                                <HiSquares2X2 size="45" />
+                            </div>
+                        </div>
+                        <div className="bg-box shadow-lg m-4 h-16 rounded-lg flex items-center justify-end group hover:bg-slate-700 transition-all">
+                             <div className="flex-grow m-4">
+                                <h1 className="text-3xl text-content">Meet the Denizens in The 'Verse</h1>
+                             </div>
+                            <div className="bg-slate-700 group-hover:bg-tertiary shadow-lg h-full aspect-square float-right rounded-r-lg text-secondary flex items-center justify-center transition-all">
+                                <IoPlanet size="45" />
+                            </div>
+                        </div>
+                        <div className="bg-box shadow-lg m-4 h-16 rounded-lg flex items-center justify-end group hover:bg-slate-700 transition-all">
+                             <div className="flex-grow m-4">
+                                <h1 className="text-3xl text-content">History is made with the Diastu Newsletter</h1>
+                             </div>
+                            <div className="bg-slate-700 group-hover:bg-tertiary shadow-lg h-full aspect-square float-right rounded-r-lg text-secondary flex items-center justify-center transition-all">
+                                <BiNews size="45" />
+                            </div>
+                        </div>
+                        <div className="bg-box shadow-lg m-4 h-16 rounded-lg flex items-center justify-end group hover:bg-slate-700 transition-all">
+                             <div className="flex-grow m-4">
+                                <h1 className="text-3xl text-content">It's always party o'clock in Special Events</h1>
+                             </div>
+                            <div className="bg-slate-700 group-hover:bg-tertiary shadow-lg h-full aspect-square float-right rounded-r-lg text-secondary flex items-center justify-center transition-all">
+                                <HiSparkles size="45" />
+                            </div>
+                        </div>
+
+
+                        
+
+
                     </div>
                 </div>
 

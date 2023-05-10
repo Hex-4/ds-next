@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 
 @layer components {
@@ -22,9 +23,14 @@
 :root {
   --border: rgb(244, 208, 3);
   
-  --g2: rgb(0, 187, 201);
-  --g1: rgb(74, 190, 74);
-  --g3: rgb(30, 109, 173);
+  --home2: rgb(0, 187, 201);
+  --home1: rgb(74, 190, 74);
+  --home3: rgb(30, 109, 173);
+
+  --proj2: rgb(230, 138, 0);
+  --proj1: rgb(209, 188, 0);
+  --proj3: rgb(197, 0, 0);
+
 
   --grad1: rgb(255, 153, 0);
   --grad2: rgb(255, 251, 0);
@@ -58,13 +64,35 @@
   transition: opacity 0ms, transform 200ms cubic-bezier(.90, .06, .15, .90);
 }
 
-.fancy-card:before {
+.fancy-card-home:before {
   background: linear-gradient(
     130deg, 
     transparent 0% 33%, 
-    var(--g1) 66%, 
-    var(--g2) 83.5%, 
-    var(--g3) 100%
+    var(--home1) 66%, 
+    var(--home2) 83.5%, 
+    var(--home3) 100%
+  );
+  background-position: 0% 0%;
+  background-size: 300% 300%;
+  content: "";
+  height: 450px;
+  left: 0px;
+  pointer-events: none;
+  position: absolute;
+  top: 0px;
+  transition: background-position 350ms ease, transform 350ms ease;
+  width: 100%;
+  z-index: 1;
+  
+}
+
+.fancy-card-projects:before {
+  background: linear-gradient(
+    130deg, 
+    transparent 0% 33%, 
+    var(--proj1) 66%, 
+    var(--proj2) 83.5%, 
+    var(--proj3) 100%
   );
   background-position: 0% 0%;
   background-size: 300% 300%;
