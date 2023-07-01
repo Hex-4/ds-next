@@ -15,9 +15,7 @@ const SideBar = () => {
             <SideBarIcon icon={<HiSquares2X2 size="32" />} text="Projects" />
             <SideBarIcon icon={<IoPlanet size="20" />} text="The 'Verse" />
             <SideBarIcon icon={<BiNews size="23" />} text="The Dimaverse Newsletter" />
-            <a href="https://freemcserver.net/server/977807" target="_blank" rel="noopener noreferrer" className="sidebar-icon group">
-            <SideBarIcon icon={<CgGames size="23" />} text="Minecraft Server" />
-            </a>
+            
         </div>
      );
 }
